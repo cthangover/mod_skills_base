@@ -664,6 +664,9 @@ namespace Cthangover.Mods.Skills
             foreach (var total in totals)
             {
                 var cell = UiKit.Row(10);
+                // The grid sizes a column by its minimum width; without expanding,
+                // the clipped key label shrinks to zero and only the number shows.
+                cell.SizeFlagsHorizontal = SizeFlags.ExpandFill;
                 var value = UiKit.Label(total.FormatValue(), UiTokens.FontBodyLarge, UiTokens.AccentBright);
                 value.CustomMinimumSize = new Vector2(54, 0);
                 value.HorizontalAlignment = HorizontalAlignment.Right;
