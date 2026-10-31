@@ -15,5 +15,82 @@
         }
       ]
     }
+  ],
+  "Kinds": [
+    {
+      "Kind": "skill",
+      "Name": "skills/schema/kind/skill",
+      "Description": "skills/schema/kind/skill_desc",
+      "Folder": "characters/skills",
+      "NewId": "{mod}/new_skill",
+      "Order": 21,
+      "Fields": [
+        {
+          "Key": "Name",
+          "Type": "locale",
+          "KeyPattern": "{mod}/skill/{id}/name",
+          "Name": "skills/schema/field/name"
+        },
+        {
+          "Key": "Description",
+          "Type": "locale",
+          "KeyPattern": "{mod}/skill/{id}/desc",
+          "Name": "skills/schema/field/description"
+        },
+        {
+          "Key": "Image",
+          "Type": "picture",
+          "Group": "characters/skills",
+          "Name": "skills/schema/field/picture"
+        },
+        {
+          "Key": "Type",
+          "Type": "choice",
+          "Options": [ "Active", "Passive", "ForCharacter" ],
+          "Default": "Passive",
+          "Name": "skills/schema/field/skill_type",
+          "Description": "skills/schema/field/skill_type_desc"
+        },
+        {
+          "Key": "Rare",
+          "Type": "choice",
+          "Options": [ "Common", "Uncommon", "Rare", "Epic", "Legendary" ],
+          "Default": "Common",
+          "Name": "skills/schema/field/rarity"
+        },
+        {
+          "Key": "GrantsAction",
+          "Type": "ref",
+          "Kind": "action",
+          "Name": "skills/schema/field/grants_action",
+          "Description": "skills/schema/field/grants_action_desc"
+        },
+        {
+          "Key": "Effects",
+          "Type": "list",
+          "Name": "skills/schema/field/effects",
+          "Description": "skills/schema/field/effects_desc",
+          "Of": [
+            {
+              "Key": "Key",
+              "Type": "text",
+              "Required": true,
+              "Name": "skills/schema/field/effect_key"
+            },
+            {
+              "Key": "Value",
+              "Type": "number",
+              "Required": true,
+              "Name": "skills/schema/field/effect_value"
+            },
+            {
+              "Key": "Percent",
+              "Type": "bool",
+              "Name": "skills/schema/field/effect_percent"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
