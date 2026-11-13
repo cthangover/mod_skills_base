@@ -1,14 +1,14 @@
 {
   "id": "skills_base",
   "name": "Skills Engine",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "ct",
   "description": "The player's collection of skill cards: skills that open possibilities in other mechanics, grant battle action cards and add up into the collection effect.",
   "category": "engine, library",
   "sources": [
     "src/**/*.cs"
   ],
-  "depends": ["ui_base>=1"],
+  "depends": ["ui_base>=0.1.0"],
   "ui": [
     {
       "id": "skills",
