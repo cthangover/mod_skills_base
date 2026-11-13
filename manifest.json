@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "ct",
   "description": "The player's collection of skill cards: skills that open possibilities in other mechanics, grant battle action cards and add up into the collection effect.",
-  "category": "engine, library",
+  "categories": ["engine", "library"],
   "sources": [
     "src/**/*.cs"
   ],
